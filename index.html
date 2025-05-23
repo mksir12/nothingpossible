@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eypz API</title>
+
+  <!-- Open Graph Meta Tags for Link Preview -->
+  <meta property="og:title" content="Eypz API">
+  <meta property="og:description" content="A lightweight API platform by Akshay-Eypz.">
+  <meta property="og:image" content="image.html" id="ogImage">
+  <meta property="og:url" content="https://api.eypz.ct.ws" id="ogUrl">
+  <meta property="og:type" content="website">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="css/all.min.css">
+
+  <!-- Link to the External CSS File -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">Eypz API</div>
+    <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
+  </header>
+
+  <div id="sidebar" class="sidebar">
+    <a href="#">Home</a>
+    <a id="ig" href="https://api.eypz.ct.ws/api/dl/instagram?url=https://www.instagram.com/reel/DIoivUToN0e/?igsh=c2IzN3EzZHlsbHM2">Instagram download</a>
+    <a id="ytmp3" href="https://api.eypz.ct.ws/api/dl/yta?url=https://youtu.be/ko_ofBdEiyA&quality=192kbps&apikey=akshay-eypz">Youtube mp3</a>
+    <a id="ytmp3-2" href="https://api.eypz.ct.ws/api/dl/yt?url=https://youtu.be/imCrd-HzrCo?si=8nSus0pYB7S27rGX&format=mp3">Youtube mp3 2</a>
+    <a id="ytmp4" href="https://api.eypz.ct.ws/api/dl/ytv?url=https://youtu.be/ko_ofBdEiyA&quality=1080&apikey=akshay-eypz">Youtube mp4</a>
+    <a id="ytmp4-2" href="https://api.eypz.ct.ws/api/dl/yt?url=https://youtu.be/imCrd-HzrCo?si=8nSus0pYB7S27rGX&format=mp4">Youtube mp4 2</a>
+    <a id="spotifysearch" href="https://api.eypz.ct.ws/api/search/spotify?q=Jhol">Spotify search</a>
+    <a id="spotifydl" href="https://api.eypz.ct.ws/api/dl/spotify?url=https://open.spotify.com/track/4XTgFBxBHN6var1BzAgE1m">Spotify download</a>
+    <a id="pindl" href="https://api.eypz.ct.ws/api/dl/pin?url=https://pin.it/7GwDnE8U6">Pinterest download</a>
+    <a id="aio" href="https://api.eypz.ct.ws/api/dl/aio?url=https://youtu.be/imCrd-HzrCo?si=8nSus0pYB7S27rG">aio</a>
+    <a id="gpt" href="https://api.eypz.ct.ws/api/ai/gpt?text=Heyy%20bro">Gpt</a>
+    <a id="gptImg" href="https://api.eypz.ct.ws/api/ai/gpt-image?prompt=bmw%20mk4%20in%20a%20chinese%20city">Gpt Image</a>
+    <a id="Flux" href="https://api.eypz.ct.ws/api/ai/flux?prompt=A%20realistic%20portrait%20of%20a%20Japanese%20teenage%20girl%20with%20white%20hair,%20sitting%20in%20front%20of%20a%20high-end%20gaming%20PC,%20playing%20GTA%20V.%20She%20is%20focused%20on%20the%20screen,%20wearing%20casual%20modern%20clothes,%20in%20a%20cozy%20gaming%20room%20with%20RGB%20lighting%20and%20gaming%20accessories%20around%20her">Flux Ai</a>
+    <a id="tts" href="https://api.eypz.ct.ws/api/ai/tts?text=Hey,%20I%27m%20izumi%20a%20multi%20Device%20WhatsApp%20bot&character=nova&speed=1.00">Tts</a>
+    <a href="#">More Coming</a>
+  </div>
+
+  <div class="main">
+    <div class="card">
+      <h3>About Me</h3>
+      <p>I'm Akshay, a newbie developer currently focusing on 
+        <a href="https://github.com/Akshay-Eypz/izumi-bot" target="_blank" style="color:#00ffe1; font-weight: bold; text-decoration: none;">Izumi-md</a>
+      </p>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top: 20px; font-weight:bold;" id="requestCount">Total API Requests: unavailable</div>
+
+  <footer>
+    Made with ♥ by Akshay-Eypz<br>
+    All rights reserved.
+    <div class="social-icons">
+      <a href="https://github.com/Akshay-Eypz" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://t.me/Akshay_Eypz" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("open");
+    }
+
+    const base = window.location.origin;
+
+    // Dynamically set Open Graph content
+    document.getElementById('ogImage').setAttribute('content', `${base}/image`);
+    document.getElementById('ogUrl').setAttribute('content', base);
+
+    // Dynamically assign API links
+    document.getElementById("ig").href = `${base}/api/dl/instagram?url=https://www.instagram.com/reel/DIoivUToN0e/?igsh=c2IzN3EzZHlsbHM2`;
+    document.getElementById("ytmp3").href = `${base}/api/dl/yta?url=https://youtu.be/ko_ofBdEiyA&quality=192kbps&apikey=akshay-eypz`;
+    document.getElementById("ytmp3-2").href = `${base}/api/dl/yt?url=https://youtu.be/imCrd-HzrCo?si=8nSus0pYB7S27rGX&format=mp3`;
+    document.getElementById("ytmp4").href = `${base}/api/dl/ytv?url=https://youtu.be/ko_ofBdEiyA&quality=1080&apikey=akshay-eypz`;
+    document.getElementById("ytmp4-2").href = `${base}/api/dl/yt?url=https://youtu.be/imCrd-HzrCo?si=8nSus0pYB7S27rGX&format=mp4`;
+    document.getElementById("spotifysearch").href = `${base}/api/search/spotify?q=Jhol`;
+    document.getElementById("spotifydl").href = `${base}/api/dl/spotify?url=https://open.spotify.com/track/4XTgFBxBHN6var1BzAgE1m`;
+    document.getElementById("pindl").href = `${base}/api/dl/pin?url=https://pin.it/7GwDnE8U6`;
+    document.getElementById("aio").href = `${base}/api/dl/aio?url=https://youtu.be/imCrd-HzrCo?si=8nSus0pYB7S27rG`;
+    document.getElementById("gpt").href = `${base}/api/ai/gpt?text=Heyy%20bro`;
+    document.getElementById("gptImg").href = `${base}/api/ai/gpt-image?prompt=bmw%20mk4%20in%20a%20chinese%20city`;
+    document.getElementById("Flux").href = `${base}/api/ai/flux?prompt=A%20realistic%20portrait%20of%20a%20Japanese%20teenage%20girl%20with%20white%20hair,%20sitting%20in%20front%20of%20a%20high-end%20gaming%20PC,%20playing%20GTA%20V.%20She%20is%20focused%20on%20the%20screen,%20wearing%20casual%20modern%20clothes,%20in%20a%20cozy%20gaming%20room%20with%20RGB%20lighting%20and%20gaming%20accessories%20around%20her`;
+    document.getElementById("tts").href = `${base}/api/ai/tts?text=Hey,%20I%27m%20izumi%20a%20multi%20Device%20WhatsApp%20bot&character=nova&speed=1.00`;
+    // Fetch total request count
+    fetch(`${base}/stats`)
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("requestCount").textContent = `Total API Requests: ${data.total_requests}`;
+      })
+      .catch(() => {
+        document.getElementById("requestCount").textContent = 'Total API Requests: unavailable';
+      });
+  </script>
+
+
+
+</body></html>
