@@ -1,0 +1,94 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0e0e0e;
+  color: #f1f1f1;
+}
+
+header {
+  background: #1a1a1a;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 15px #00ffe1;
+}
+
+.logo {
+  font-size: 1.5em;
+  color: #00ffe1;
+  font-weight: bold;
+  text-shadow: 0 0 8px #00ffe1;
+}
+
+.toggle-btn {
+  font-size: 1.5em;
+  color: #00ffe1;
+  cursor: pointer;
+}
+
+.sidebar {
+  width: 250px;
+  background: #121212;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100%;
+  transition: 0.3s ease;
+  padding-top: 70px;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px 20px;
+  color: #00ffe1;
+  text-decoration: none;
+  border-bottom: 1px solid #1e1e1e;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  background: #1e1e1e;
+}
+
+.main {
+  padding: 80px 30px 30px 30px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #00ffe1;
+  box-shadow: 0 0 10px #00ffe1;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #00ffe1;
+  margin: 0 10px;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #888;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
